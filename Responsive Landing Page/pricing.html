@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flexible pricing plans for businesses of all sizes">
+    <title>Pricing Plans - DigitalPro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-rocket"></i>
+                    <span>Digital<strong>Pro</strong></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button class="btn btn-outline">Sign In</button>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Simple, Transparent Pricing</h1>
+                <p>Choose the perfect plan for your business needs. No hidden fees, cancel anytime.</p>
+                <div class="pricing-toggle">
+                    <span class="toggle-label">Monthly</span>
+                    <label class="switch">
+                        <input type="checkbox" id="billing-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label">Annual <span class="save-badge">Save 20%</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p>Perfect for individuals and small teams</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount" data-monthly="29" data-annual="23">29</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="billing-note">Billed monthly</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 5 team members</li>
+                        <li><i class="fas fa-check"></i> 10 GB storage</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li><i class="fas fa-check"></i> Mobile app access</li>
+                        <li><i class="fas fa-check"></i> SSL certificate</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Advanced integrations</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Priority support</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Custom branding</li>
+                    </ul>
+                    <button class="btn btn-outline btn-lg btn-full">Start Free Trial</button>
+                </div>
+
+                <!-- Professional Plan (Popular) -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <p>Ideal for growing businesses</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount" data-monthly="79" data-annual="63">79</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="billing-note">Billed monthly</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 20 team members</li>
+                        <li><i class="fas fa-check"></i> 100 GB storage</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Priority email support</li>
+                        <li><i class="fas fa-check"></i> Mobile & desktop apps</li>
+                        <li><i class="fas fa-check"></i> SSL certificate</li>
+                        <li><i class="fas fa-check"></i> Advanced integrations</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                        <li><i class="fas fa-check"></i> Custom branding</li>
+                    </ul>
+                    <button class="btn btn-primary btn-lg btn-full">Start Free Trial</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p>For large organizations with custom needs</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="amount custom">Custom</span>
+                    </div>
+                    <p class="billing-note">Contact us for pricing</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited team members</li>
+                        <li><i class="fas fa-check"></i> Unlimited storage</li>
+                        <li><i class="fas fa-check"></i> Enterprise analytics</li>
+                        <li><i class="fas fa-check"></i> 24/7 phone & chat support</li>
+                        <li><i class="fas fa-check"></i> All platforms</li>
+                        <li><i class="fas fa-check"></i> Advanced SSL & security</li>
+                        <li><i class="fas fa-check"></i> All integrations</li>
+                        <li><i class="fas fa-check"></i> Dedicated API access</li>
+                        <li><i class="fas fa-check"></i> Full white-label</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> Custom SLA</li>
+                        <li><i class="fas fa-check"></i> On-premise deployment</li>
+                    </ul>
+                    <button class="btn btn-outline btn-lg btn-full">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compare All Features</h2>
+                <p class="section-description">See detailed comparison of features across all plans</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Starter</th>
+                            <th class="highlighted">Professional</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Team Members</td>
+                            <td>Up to 5</td>
+                            <td class="highlighted">Up to 20</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Storage</td>
+                            <td>10 GB</td>
+                            <td class="highlighted">100 GB</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Projects</td>
+                            <td>10</td>
+                            <td class="highlighted">100</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">File Upload Size</td>
+                            <td>25 MB</td>
+                            <td class="highlighted">100 MB</td>
+                            <td>1 GB</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Analytics & Reporting</td>
+                            <td><i class="fas fa-check text-success"></i> Basic</td>
+                            <td class="highlighted"><i class="fas fa-check text-success"></i> Advanced</td>
+                            <td><i class="fas fa-check text-success"></i> Enterprise</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">API Access</td>
+                            <td><i class="fas fa-times text-muted"></i></td>
+                            <td class="highlighted"><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Custom Integrations</td>
+                            <td><i class="fas fa-times text-muted"></i></td>
+                            <td class="highlighted"><i class="fas fa-check text-success"></i> 50+</td>
+                            <td><i class="fas fa-check text-success"></i> Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Custom Branding</td>
+                            <td><i class="fas fa-times text-muted"></i></td>
+                            <td class="highlighted"><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Support</td>
+                            <td>Email</td>
+                            <td class="highlighted">Priority Email</td>
+                            <td>24/7 Phone & Chat</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Response Time</td>
+                            <td>24 hours</td>
+                            <td class="highlighted">4 hours</td>
+                            <td>1 hour</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Dedicated Account Manager</td>
+                            <td><i class="fas fa-times text-muted"></i></td>
+                            <td class="highlighted"><i class="fas fa-times text-muted"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Training & Onboarding</td>
+                            <td>Self-service</td>
+                            <td class="highlighted">Video tutorials</td>
+                            <td>Personalized sessions</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">SLA Guarantee</td>
+                            <td>99.5%</td>
+                            <td class="highlighted">99.9%</td>
+                            <td>99.99%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2 class="section-title">Pricing Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I switch plans at any time?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate the difference in your next billing cycle.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens after my free trial ends?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your 14-day free trial gives you full access to all features. After the trial, you'll need to choose a paid plan to continue. We'll remind you before your trial ends, and you won't be charged without confirmation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer refunds?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer a 30-day money-back guarantee. If you're not satisfied for any reason, contact us within 30 days of your purchase for a full refund, no questions asked.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are there any setup fees or hidden costs?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No! The price you see is the price you pay. There are no setup fees, hidden costs, or surprise charges. Everything is transparent and upfront.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I get a discount for annual billing?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! You save 20% when you choose annual billing. That's like getting over 2 months free compared to monthly billing.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer discounts for nonprofits or education?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer special pricing for qualified nonprofits, educational institutions, and startups. Contact our sales team to learn more about our discount programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Try DigitalPro free for 14 days. No credit card required.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-white btn-lg">
+                        Start Free Trial
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-outline-white btn-lg" onclick="window.location.href='contact.html'">
+                        Contact Sales
+                    </button>
+                </div>
+                <p class="cta-note">14-day free trial • No credit card required • Cancel anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>Digital<strong>Pro</strong></span>
+                    </div>
+                    <p>Empowering businesses with cutting-edge digital solutions since 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="index.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@digitalpro.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DigitalPro. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="pricing.js"></script>
+</body>
+</html>
