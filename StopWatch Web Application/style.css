@@ -8,11 +8,67 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #667eea;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+body {
+    padding-top: 80px;
 }
 
 .background-animation {
@@ -362,7 +418,489 @@ body {
     background: #764ba2;
 }
 
+/* Timer Page Styles */
+.timer-input-section {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.input-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-item label {
+    font-weight: 600;
+    color: #667eea;
+    font-size: 0.9rem;
+}
+
+.time-input {
+    width: 80px;
+    padding: 15px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    border: 2px solid #667eea;
+    border-radius: 15px;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+.time-input:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.input-separator {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-top: 20px;
+}
+
+.quick-timers h3 {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.quick-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.quick-btn {
+    padding: 12px 20px;
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 12px;
+    color: #667eea;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quick-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.timer-display {
+    position: relative;
+}
+
+.progress-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-ring-circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 8;
+}
+
+.progress-ring-circle {
+    fill: none;
+    stroke: white;
+    stroke-width: 8;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.notification {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150%);
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    transition: transform 0.5s ease;
+}
+
+.notification.show {
+    transform: translateX(-50%) translateY(0);
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(-50%) translateY(0) rotate(0deg); }
+    25% { transform: translateX(-50%) translateY(0) rotate(-5deg); }
+    75% { transform: translateX(-50%) translateY(0) rotate(5deg); }
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification-icon {
+    font-size: 2rem;
+    animation: ring 1s infinite;
+}
+
+@keyframes ring {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30% { transform: rotate(-15deg); }
+    20%, 40% { transform: rotate(15deg); }
+}
+
+.notification-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Clock Page Styles */
+.analog-clock {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.clock-face {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.clock-number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.clock-number::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(calc(var(--i) * 30deg));
+    transform-origin: center 140px;
+}
+
+.clock-number {
+    transform: rotate(calc(var(--i) * 30deg));
+}
+
+.clock-number::after {
+    content: attr(data-number);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(calc(var(--i) * -30deg));
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    background: white;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.hour-hand {
+    width: 6px;
+    height: 80px;
+    margin-left: -3px;
+    background: white;
+    z-index: 3;
+}
+
+.minute-hand {
+    width: 4px;
+    height: 110px;
+    margin-left: -2px;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+}
+
+.second-hand {
+    width: 2px;
+    height: 120px;
+    margin-left: -1px;
+    background: #f5576c;
+    z-index: 4;
+}
+
+.clock-center {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.digital-clock {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.digital-time {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.digital-date {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.timezone-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.timezone-select label {
+    font-weight: 600;
+    color: #667eea;
+}
+
+.timezone-select select {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #667eea;
+    border-radius: 10px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.timezone-select select:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.world-times {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.world-times h3 {
+    color: #667eea;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.city-time {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.city-name {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.city-clock {
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    color: #667eea;
+}
+
+/* About Page Styles */
+.about-card {
+    max-width: 800px;
+}
+
+.about-content {
+    padding: 20px 0;
+}
+
+.about-section {
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.about-section p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tech-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.usage-guide {
+    margin-top: 20px;
+}
+
+.guide-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.guide-item strong {
+    color: #667eea;
+}
+
+.tips-list {
+    margin-top: 15px;
+    padding-left: 25px;
+}
+
+.tips-list li {
+    color: #555;
+    line-height: 2;
+    font-size: 1.05rem;
+}
+
+.footer-section {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid #f8f9fa;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.version {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+
 /* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    body {
+        padding-top: 120px;
+    }
+}
+
 @media (max-width: 600px) {
     .stopwatch-card {
         padding: 25px;
@@ -393,4 +931,47 @@ body {
         font-size: 1rem;
         padding: 12px 20px;
     }
+    
+    /* Timer responsive */
+    .input-group {
+        gap: 10px;
+    }
+    
+    .time-input {
+        width: 60px;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    
+    .input-separator {
+        font-size: 1.5rem;
+    }
+    
+    .quick-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Clock responsive */
+    .clock-face {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .digital-time {
+        font-size: 2.5rem;
+    }
+    
+    .cities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* About responsive */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
 }
+

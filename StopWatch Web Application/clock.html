@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock - TimeKeeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">⏱️ TimeKeeper</div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Stopwatch</a></li>
+            <li><a href="timer.html" class="nav-link">Timer</a></li>
+            <li><a href="clock.html" class="nav-link active">Clock</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="background-animation">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="stopwatch-card">
+            <h1 class="title">
+                <span class="icon">🌍</span>
+                World Clock
+            </h1>
+            
+            <!-- Analog Clock -->
+            <div class="analog-clock">
+                <div class="clock-face">
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <div class="clock-center"></div>
+                    <div class="clock-number" style="--i:1">1</div>
+                    <div class="clock-number" style="--i:2">2</div>
+                    <div class="clock-number" style="--i:3">3</div>
+                    <div class="clock-number" style="--i:4">4</div>
+                    <div class="clock-number" style="--i:5">5</div>
+                    <div class="clock-number" style="--i:6">6</div>
+                    <div class="clock-number" style="--i:7">7</div>
+                    <div class="clock-number" style="--i:8">8</div>
+                    <div class="clock-number" style="--i:9">9</div>
+                    <div class="clock-number" style="--i:10">10</div>
+                    <div class="clock-number" style="--i:11">11</div>
+                    <div class="clock-number" style="--i:12">12</div>
+                </div>
+            </div>
+            
+            <!-- Digital Clock -->
+            <div class="digital-clock">
+                <div class="digital-time" id="digitalTime">00:00:00</div>
+                <div class="digital-date" id="digitalDate">Monday, January 1, 2025</div>
+                <div class="timezone-select">
+                    <label>Timezone:</label>
+                    <select id="timezoneSelect">
+                        <option value="local">Local Time</option>
+                        <option value="UTC">UTC</option>
+                        <option value="America/New_York">New York (EST)</option>
+                        <option value="America/Los_Angeles">Los Angeles (PST)</option>
+                        <option value="Europe/London">London (GMT)</option>
+                        <option value="Europe/Paris">Paris (CET)</option>
+                        <option value="Asia/Tokyo">Tokyo (JST)</option>
+                        <option value="Asia/Dubai">Dubai (GST)</option>
+                        <option value="Asia/Kolkata">India (IST)</option>
+                        <option value="Australia/Sydney">Sydney (AEDT)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- World Times -->
+            <div class="world-times">
+                <h3>Major Cities</h3>
+                <div class="cities-grid">
+                    <div class="city-time">
+                        <div class="city-name">🗽 New York</div>
+                        <div class="city-clock" id="newYork">--:--</div>
+                    </div>
+                    <div class="city-time">
+                        <div class="city-name">🌁 Los Angeles</div>
+                        <div class="city-clock" id="losAngeles">--:--</div>
+                    </div>
+                    <div class="city-time">
+                        <div class="city-name">🏰 London</div>
+                        <div class="city-clock" id="london">--:--</div>
+                    </div>
+                    <div class="city-time">
+                        <div class="city-name">🗼 Paris</div>
+                        <div class="city-clock" id="paris">--:--</div>
+                    </div>
+                    <div class="city-time">
+                        <div class="city-name">🗾 Tokyo</div>
+                        <div class="city-clock" id="tokyo">--:--</div>
+                    </div>
+                    <div class="city-time">
+                        <div class="city-name">🕌 Dubai</div>
+                        <div class="city-clock" id="dubai">--:--</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="clock.js"></script>
+</body>
+</html>
