@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe - Home</title>
+    <link rel="stylesheet" href="home-style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-x">X</span>
+                <span class="logo-o">O</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="game-modes.html">Play</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Welcome to</span>
+                <span class="title-main">
+                    <span class="highlight-x">TIC</span>
+                    <span class="highlight-dash">-</span>
+                    <span class="highlight-o">TAC</span>
+                    <span class="highlight-dash">-</span>
+                    <span class="highlight-x">TOE</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">Experience the classic game like never before with stunning visuals and multiple game modes!</p>
+            
+            <div class="hero-buttons">
+                <a href="game-modes.html" class="btn btn-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Start Playing
+                </a>
+                <a href="about.html" class="btn btn-secondary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="game-preview">
+                <div class="preview-board">
+                    <div class="preview-cell x-cell">X</div>
+                    <div class="preview-cell"></div>
+                    <div class="preview-cell o-cell">O</div>
+                    <div class="preview-cell"></div>
+                    <div class="preview-cell x-cell">X</div>
+                    <div class="preview-cell"></div>
+                    <div class="preview-cell o-cell">O</div>
+                    <div class="preview-cell"></div>
+                    <div class="preview-cell x-cell">X</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-section">
+        <h2 class="section-title">Why Play Our Tic-Tac-Toe?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <h3>Multiple Game Modes</h3>
+                <p>Play against friends, AI, or practice solo. Choose from Easy, Medium, and Hard difficulty levels.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Beautiful Design</h3>
+                <p>Enjoy a modern, visually stunning interface with smooth animations and effects.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Track Progress</h3>
+                <p>Keep track of your wins, losses, and draws with our persistent score system.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast & Responsive</h3>
+                <p>Optimized for all devices. Play on desktop, tablet, or mobile seamlessly.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3>Leaderboard</h3>
+                <p>Compete with others and see where you rank on the global leaderboard.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Achievements</h3>
+                <p>Unlock achievements and badges as you master the game.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Play?</h2>
+            <p>Join thousands of players and start your Tic-Tac-Toe journey today!</p>
+            <a href="game-modes.html" class="btn btn-large">Get Started Now</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tic-Tac-Toe</h3>
+                <p>The ultimate classic game experience.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="game-modes.html">Play</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">📸</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tic-Tac-Toe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home-script.js"></script>
+</body>
+</html>

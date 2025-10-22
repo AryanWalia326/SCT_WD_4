@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Modes - Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="game-modes-style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-x">X</span>
+                <span class="logo-o">O</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="game-modes.html" class="active">Play</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="modes-container">
+        <div class="modes-header">
+            <h1 class="page-title">Choose Your Game Mode</h1>
+            <p class="page-subtitle">Select how you want to play and start your journey!</p>
+        </div>
+
+        <div class="modes-grid">
+            <div class="mode-card featured">
+                <div class="mode-badge">Popular</div>
+                <div class="mode-icon">👥</div>
+                <h2 class="mode-title">2 Player</h2>
+                <p class="mode-description">Challenge your friend in this classic head-to-head battle. Best mode for competitive play!</p>
+                <ul class="mode-features">
+                    <li>✓ Play with a friend</li>
+                    <li>✓ Track scores</li>
+                    <li>✓ Local multiplayer</li>
+                    <li>✓ Instant action</li>
+                </ul>
+                <a href="index.html" class="mode-btn btn-primary">Play Now</a>
+            </div>
+
+            <div class="mode-card">
+                <div class="mode-icon">🤖</div>
+                <h2 class="mode-title">vs AI - Easy</h2>
+                <p class="mode-description">Perfect for beginners! The AI makes occasional mistakes, giving you a chance to learn.</p>
+                <ul class="mode-features">
+                    <li>✓ Beginner friendly</li>
+                    <li>✓ Learn strategies</li>
+                    <li>✓ Relaxed gameplay</li>
+                    <li>✓ Build confidence</li>
+                </ul>
+                <a href="ai-easy.html" class="mode-btn btn-secondary">Play Easy</a>
+            </div>
+
+            <div class="mode-card">
+                <div class="mode-icon">🎯</div>
+                <h2 class="mode-title">vs AI - Medium</h2>
+                <p class="mode-description">A balanced challenge! The AI plays smart but still allows for strategic victories.</p>
+                <ul class="mode-features">
+                    <li>✓ Moderate difficulty</li>
+                    <li>✓ Strategic thinking</li>
+                    <li>✓ Good practice</li>
+                    <li>✓ Fair competition</li>
+                </ul>
+                <a href="ai-medium.html" class="mode-btn btn-secondary">Play Medium</a>
+            </div>
+
+            <div class="mode-card featured">
+                <div class="mode-badge">Challenge</div>
+                <div class="mode-icon">🔥</div>
+                <h2 class="mode-title">vs AI - Hard</h2>
+                <p class="mode-description">The ultimate test! Face an AI that never makes mistakes. Can you force a draw?</p>
+                <ul class="mode-features">
+                    <li>✓ Maximum difficulty</li>
+                    <li>✓ Perfect AI</li>
+                    <li>✓ Expert level</li>
+                    <li>✓ Ultimate challenge</li>
+                </ul>
+                <a href="ai-hard.html" class="mode-btn btn-primary">Play Hard</a>
+            </div>
+
+            <div class="mode-card">
+                <div class="mode-icon">⏱️</div>
+                <h2 class="mode-title">Timed Mode</h2>
+                <p class="mode-description">Race against the clock! Make your moves quickly or lose your turn.</p>
+                <ul class="mode-features">
+                    <li>✓ Fast-paced action</li>
+                    <li>✓ 10 seconds per move</li>
+                    <li>✓ Pressure gameplay</li>
+                    <li>✓ Quick thinking</li>
+                </ul>
+                <a href="timed-mode.html" class="mode-btn btn-secondary">Play Timed</a>
+            </div>
+
+            <div class="mode-card">
+                <div class="mode-icon">🎲</div>
+                <h2 class="mode-title">Random Mode</h2>
+                <p class="mode-description">Chaos mode! Random events and special cells make every game unpredictable.</p>
+                <ul class="mode-features">
+                    <li>✓ Unpredictable</li>
+                    <li>✓ Special power-ups</li>
+                    <li>✓ Unique experience</li>
+                    <li>✓ Fun & casual</li>
+                </ul>
+                <a href="random-mode.html" class="mode-btn btn-secondary">Play Random</a>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <h2 class="stats-title">Your Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalGames">0</div>
+                    <div class="stat-label">Total Games</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalWins">0</div>
+                    <div class="stat-label">Total Wins</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="winRate">0%</div>
+                    <div class="stat-label">Win Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="streak">0</div>
+                    <div class="stat-label">Win Streak</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tic-Tac-Toe</h3>
+                <p>The ultimate classic game experience.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="game-modes.html">Play</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">📸</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tic-Tac-Toe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="game-modes-script.js"></script>
+</body>
+</html>

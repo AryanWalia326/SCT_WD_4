@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="leaderboard-style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-x">X</span>
+                <span class="logo-o">O</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="game-modes.html">Play</a></li>
+                <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="leaderboard-container">
+        <div class="leaderboard-header">
+            <h1 class="page-title">🏆 Leaderboard</h1>
+            <p class="page-subtitle">Top players from around the world</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Time</button>
+            <button class="filter-btn" data-filter="weekly">This Week</button>
+            <button class="filter-btn" data-filter="monthly">This Month</button>
+        </div>
+
+        <div class="podium">
+            <div class="podium-place second">
+                <div class="trophy-icon">🥈</div>
+                <div class="player-avatar" style="background: linear-gradient(135deg, #c0c0c0, #e8e8e8)">
+                    <span>2</span>
+                </div>
+                <div class="player-name">Sarah Chen</div>
+                <div class="player-score">2,847 pts</div>
+                <div class="player-stats">185 wins</div>
+            </div>
+
+            <div class="podium-place first">
+                <div class="crown-icon">👑</div>
+                <div class="trophy-icon">🥇</div>
+                <div class="player-avatar" style="background: linear-gradient(135deg, #ffd700, #ffed4e)">
+                    <span>1</span>
+                </div>
+                <div class="player-name">Alex Johnson</div>
+                <div class="player-score">3,542 pts</div>
+                <div class="player-stats">247 wins</div>
+            </div>
+
+            <div class="podium-place third">
+                <div class="trophy-icon">🥉</div>
+                <div class="player-avatar" style="background: linear-gradient(135deg, #cd7f32, #e6a561)">
+                    <span>3</span>
+                </div>
+                <div class="player-name">Mike Torres</div>
+                <div class="player-score">2,103 pts</div>
+                <div class="player-stats">142 wins</div>
+            </div>
+        </div>
+
+        <div class="leaderboard-table">
+            <div class="table-header">
+                <div class="rank-col">Rank</div>
+                <div class="player-col">Player</div>
+                <div class="score-col">Score</div>
+                <div class="wins-col">Wins</div>
+                <div class="winrate-col">Win Rate</div>
+            </div>
+
+            <div class="table-body" id="leaderboardBody">
+                <!-- Dynamically generated -->
+            </div>
+        </div>
+
+        <div class="your-rank-section">
+            <h2>Your Ranking</h2>
+            <div class="your-rank-card">
+                <div class="rank-badge">#<span id="yourRank">-</span></div>
+                <div class="rank-info">
+                    <div class="rank-name">You</div>
+                    <div class="rank-details">
+                        <span id="yourScore">0</span> pts • 
+                        <span id="yourWins">0</span> wins • 
+                        <span id="yourWinRate">0</span>% win rate
+                    </div>
+                </div>
+                <a href="game-modes.html" class="rank-btn">Play More</a>
+            </div>
+        </div>
+
+        <div class="achievements-section">
+            <h2 class="section-title">🎯 Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card unlocked">
+                    <div class="achievement-icon">🎮</div>
+                    <div class="achievement-name">First Victory</div>
+                    <div class="achievement-desc">Win your first game</div>
+                </div>
+                <div class="achievement-card unlocked">
+                    <div class="achievement-icon">🔥</div>
+                    <div class="achievement-name">Hot Streak</div>
+                    <div class="achievement-desc">Win 5 games in a row</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">💯</div>
+                    <div class="achievement-name">Century Club</div>
+                    <div class="achievement-desc">Win 100 games</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🤖</div>
+                    <div class="achievement-name">AI Slayer</div>
+                    <div class="achievement-desc">Beat Hard AI</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">⚡</div>
+                    <div class="achievement-name">Speed Demon</div>
+                    <div class="achievement-desc">Win in under 30 seconds</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-name">Legend</div>
+                    <div class="achievement-desc">Reach rank 1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tic-Tac-Toe</h3>
+                <p>The ultimate classic game experience.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="game-modes.html">Play</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">📸</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tic-Tac-Toe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="leaderboard-script.js"></script>
+</body>
+</html>
