@@ -22,6 +22,32 @@ function init() {
     displayCurrentDate();
     renderTasks();
     updateStats();
+    applyStoredTheme();
+}
+
+// Apply stored theme
+function applyStoredTheme() {
+    const settings = localStorage.getItem('settings');
+    if (settings) {
+        const { theme } = JSON.parse(settings);
+        if (theme) {
+            const themes = {
+                purple: { primary: '#667eea', secondary: '#764ba2' },
+                ocean: { primary: '#4facfe', secondary: '#00f2fe' },
+                sunset: { primary: '#f093fb', secondary: '#f5576c' },
+                forest: { primary: '#43e97b', secondary: '#38f9d7' },
+                dark: { primary: '#2c3e50', secondary: '#34495e' },
+                fire: { primary: '#ff9a56', secondary: '#ff6a88' }
+            };
+            
+            const selectedTheme = themes[theme];
+            if (selectedTheme) {
+                document.documentElement.style.setProperty('--primary-color', selectedTheme.primary);
+                document.documentElement.style.setProperty('--secondary-color', selectedTheme.secondary);
+                document.body.style.background = `linear-gradient(135deg, ${selectedTheme.primary} 0%, ${selectedTheme.secondary} 100%)`;
+            }
+        }
+    }
 }
 
 // Display current date

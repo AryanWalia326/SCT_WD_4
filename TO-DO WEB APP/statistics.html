@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-tasks"></i> TaskMaster
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="statistics.html" class="nav-link active"><i class="fas fa-chart-bar"></i> Statistics</a></li>
+                <li><a href="settings.html" class="nav-link"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="todo-app">
+            <div class="header">
+                <h1><i class="fas fa-chart-bar"></i> Your Statistics</h1>
+                <p class="date">Track your productivity</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="statTotal">0</h3>
+                        <p>Total Tasks</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="statActive">0</h3>
+                        <p>Active Tasks</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="statCompleted">0</h3>
+                        <p>Completed Tasks</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="statCompletion">0%</h3>
+                        <p>Completion Rate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <h2><i class="fas fa-trophy"></i> Progress Overview</h2>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p class="progress-text" id="progressText">Complete more tasks to increase your progress!</p>
+            </div>
+
+            <div class="achievement-section">
+                <h2><i class="fas fa-medal"></i> Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card" id="achievement1">
+                        <i class="fas fa-star"></i>
+                        <h4>First Task</h4>
+                        <p>Create your first task</p>
+                    </div>
+                    <div class="achievement-card" id="achievement2">
+                        <i class="fas fa-fire"></i>
+                        <h4>On Fire</h4>
+                        <p>Complete 5 tasks</p>
+                    </div>
+                    <div class="achievement-card" id="achievement3">
+                        <i class="fas fa-crown"></i>
+                        <h4>Task Master</h4>
+                        <p>Complete 20 tasks</p>
+                    </div>
+                    <div class="achievement-card" id="achievement4">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Productivity Guru</h4>
+                        <p>Maintain 80% completion rate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h2><i class="fas fa-clock"></i> Recent Activity</h2>
+                <ul id="activityList" class="activity-list">
+                    <li class="activity-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>No recent activity yet. Start creating tasks!</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="statistics.js"></script>
+</body>
+</html>
