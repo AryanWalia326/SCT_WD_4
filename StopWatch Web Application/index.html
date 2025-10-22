@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch - Professional Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="stopwatch-card">
+            <h1 class="title">
+                <span class="icon">⏱️</span>
+                Stopwatch
+            </h1>
+            
+            <div class="display-container">
+                <div class="time-display">
+                    <span id="hours">00</span>
+                    <span class="separator">:</span>
+                    <span id="minutes">00</span>
+                    <span class="separator">:</span>
+                    <span id="seconds">00</span>
+                    <span class="separator">:</span>
+                    <span id="milliseconds">00</span>
+                </div>
+                <div class="time-labels">
+                    <span>Hours</span>
+                    <span>Minutes</span>
+                    <span>Seconds</span>
+                    <span>MS</span>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="startBtn" class="btn btn-start">
+                    <span class="btn-icon">▶</span>
+                    Start
+                </button>
+                <button id="pauseBtn" class="btn btn-pause" disabled>
+                    <span class="btn-icon">⏸</span>
+                    Pause
+                </button>
+                <button id="resetBtn" class="btn btn-reset">
+                    <span class="btn-icon">↻</span>
+                    Reset
+                </button>
+                <button id="lapBtn" class="btn btn-lap" disabled>
+                    <span class="btn-icon">🏁</span>
+                    Lap
+                </button>
+            </div>
+            
+            <div class="laps-container">
+                <div class="laps-header">
+                    <h2>Lap Times</h2>
+                    <button id="clearLapsBtn" class="btn-clear">Clear All</button>
+                </div>
+                <div id="lapsList" class="laps-list">
+                    <p class="no-laps">No laps recorded yet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
