@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <div class="header">
+                <h1><i class="fas fa-check-circle"></i> My Tasks</h1>
+                <p class="date" id="currentDate"></p>
+            </div>
+
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="What needs to be done?"
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="add-btn">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalTasks">0</span>
+                    <span class="stat-label">Total</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="activeTasks">0</span>
+                    <span class="stat-label">Active</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="completedTasks">0</span>
+                    <span class="stat-label">Done</span>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-list"></i> All
+                </button>
+                <button class="filter-btn" data-filter="active">
+                    <i class="fas fa-circle"></i> Active
+                </button>
+                <button class="filter-btn" data-filter="completed">
+                    <i class="fas fa-check-circle"></i> Completed
+                </button>
+            </div>
+
+            <div class="tasks-container">
+                <ul id="taskList" class="task-list"></ul>
+                <div class="empty-state" id="emptyState">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>No tasks yet!</p>
+                    <span>Add a task to get started</span>
+                </div>
+            </div>
+
+            <div class="footer">
+                <button id="clearCompleted" class="clear-btn">
+                    <i class="fas fa-trash"></i> Clear Completed
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
