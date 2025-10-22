@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe - Play Now!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1 class="game-title">
+                <span class="title-x">TIC</span>
+                <span class="title-dash">-</span>
+                <span class="title-o">TAC</span>
+                <span class="title-dash">-</span>
+                <span class="title-x">TOE</span>
+            </h1>
+            <p class="game-subtitle">Challenge yourself in this classic game!</p>
+        </div>
+
+        <div class="game-info">
+            <div class="player-turn">
+                <span class="current-player">Player <span id="currentPlayer">X</span>'s Turn</span>
+            </div>
+            <div class="score-board">
+                <div class="score-item player-x">
+                    <span class="score-label">Player X</span>
+                    <span class="score-value" id="scoreX">0</span>
+                </div>
+                <div class="score-item draws">
+                    <span class="score-label">Draws</span>
+                    <span class="score-value" id="scoreDraw">0</span>
+                </div>
+                <div class="score-item player-o">
+                    <span class="score-label">Player O</span>
+                    <span class="score-value" id="scoreO">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="game-controls">
+            <button class="btn btn-restart" id="restartBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+                </svg>
+                Restart Game
+            </button>
+            <button class="btn btn-reset" id="resetBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                </svg>
+                Reset Score
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" id="winnerModal">
+        <div class="modal-content">
+            <div class="modal-icon" id="modalIcon"></div>
+            <h2 class="modal-title" id="modalTitle">Player X Wins!</h2>
+            <p class="modal-message" id="modalMessage">Congratulations on your victory!</p>
+            <button class="btn btn-play-again" id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
